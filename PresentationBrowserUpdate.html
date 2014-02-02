@@ -2,13 +2,41 @@
 <html>
 <head>
 
-<meta http-equiv="refresh" content="5"
+<script LANGUAGE="JavaScript">
+
+//Perhaps changing the entire look and then switching back will force the browser to load the latest content in the Google Drive presentaiton.
+
+
+function changeLink: (linkNumber){
+
+var linkBank = newArray();
+
+//linkBank[0] contained several sets of quotations marks with the link. I attempted to escape them so that the entire link counts as string.
+linkBank[0] = "https://docs.google.com/presentation/d/1Byp9Ao6sY
+hIAkPfkvynmxZZInnJdLS77mmnNjfBYf8w/embed?start=true&loop=false&delayms=500\" frameborder=\"0\" width=\"960\" height=\"569\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"
+
+linkBank[1] = "http://www.mozilla.org/en-US/"
+
+return linkBank[linkNumber]
+}
+
+//The below could eventually be a neat loop with a timer.
+
+presentationLink = changeLink(0)
+presentationLink = changeLink(1)
+presentationLink = changeLink(0)
+
+
+
+</script>
+
 
 </head>
 
+
 <body>
 
-<iframe src="https://docs.google.com/presentation/d/1Byp9Ao6sYhIAkPfkvynmxZZInnJdLS77mmnNjfBYf8w/embed?start=true&loop=false&delayms=500" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src=presentationLink></iframe>
 
 </body>
 </html>
